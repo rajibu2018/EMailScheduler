@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailScheduler", "MailScheduler\MailScheduler.csproj", "{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1BAB3855-2B40-48C2-A396-53D750E9E111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreServices", "CoreServices\CoreServices.csproj", "{7A97597A-CF4C-4669-8035-DC95B0D485F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{4A33BB58-E642-4D8F-8586-FA326A6BF1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRepositories", "DataRepositories\DataRepositories.csproj", "{2C6F1F27-10A2-4967-936C-A0910AF46D1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1CCD0E16-C079-4AAE-B211-654DF66EF5FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSchedulerModels", "MailSchedulerModels\MailSchedulerModels.csproj", "{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A97597A-CF4C-4669-8035-DC95B0D485F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A97597A-CF4C-4669-8035-DC95B0D485F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A97597A-CF4C-4669-8035-DC95B0D485F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A97597A-CF4C-4669-8035-DC95B0D485F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C6F1F27-10A2-4967-936C-A0910AF46D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C6F1F27-10A2-4967-936C-A0910AF46D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C6F1F27-10A2-4967-936C-A0910AF46D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C6F1F27-10A2-4967-936C-A0910AF46D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A97597A-CF4C-4669-8035-DC95B0D485F0} = {1BAB3855-2B40-48C2-A396-53D750E9E111}
+		{2C6F1F27-10A2-4967-936C-A0910AF46D1E} = {4A33BB58-E642-4D8F-8586-FA326A6BF1A8}
+		{0F6BAE89-8833-4CCF-90B2-04AF15A434AA} = {1CCD0E16-C079-4AAE-B211-654DF66EF5FB}
+		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D} = {1BAB3855-2B40-48C2-A396-53D750E9E111}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BB5D9B7-CED9-41D5-9EAF-BD31037198FC}
+	EndGlobalSection
+EndGlobal
