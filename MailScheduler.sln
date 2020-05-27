@@ -3,21 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailScheduler", "MailScheduler\MailScheduler.csproj", "{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailScheduler", "MailScheduler\MailScheduler.csproj", "{7F6ABA9D-7E55-4D31-A3D1-629E83E68867}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1BAB3855-2B40-48C2-A396-53D750E9E111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreServices", "CoreServices\CoreServices.csproj", "{7A97597A-CF4C-4669-8035-DC95B0D485F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreServices", "CoreServices\CoreServices.csproj", "{7A97597A-CF4C-4669-8035-DC95B0D485F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{4A33BB58-E642-4D8F-8586-FA326A6BF1A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRepositories", "DataRepositories\DataRepositories.csproj", "{2C6F1F27-10A2-4967-936C-A0910AF46D1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataRepositories", "DataRepositories\DataRepositories.csproj", "{2C6F1F27-10A2-4967-936C-A0910AF46D1E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1CCD0E16-C079-4AAE-B211-654DF66EF5FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSchedulerModels", "MailSchedulerModels\MailSchedulerModels.csproj", "{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailSchedulerModels", "MailSchedulerModels\MailSchedulerModels.csproj", "{0F6BAE89-8833-4CCF-90B2-04AF15A434AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBScript", "DBScript", "{F006C365-91D7-42A8-AE6B-B020F75BEFAD}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\dell\Desktop\DBScript.sql = C:\Users\dell\Desktop\DBScript.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
