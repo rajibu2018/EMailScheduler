@@ -21,7 +21,7 @@ namespace CoreServices.Impl {
                 foreach (var user in mailNeedToSendUsers) {
                     var guid = Guid.NewGuid();
                     var emailModel = new EmailServiceModel {
-                        FromAddress = "priyagh945@gmail.com",
+                        FromAddress = "sender@gmail.com",
                         Message = GetMailBody(user.Name, guid),
                         Subject = "Important Message for you from CusJo",
                         ToAddress = user.MailId

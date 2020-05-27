@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 
 namespace DataRepositories {
     public class MailDataRepositories : IMailDataRepositories {
-
         public string ConnectionString { get; set; }
         public MailDataRepositories() {
             ConnectionString = @"Data Source=DELL-PC\SQLEXPRESS;Initial Catalog=MailServer;Integrated Security=True;Pooling=False";

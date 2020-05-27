@@ -6,7 +6,7 @@ using ServiceModel;
 
 namespace CoreServices.Impl {
     public class ReminderMailSenderService : IJobService {
-
+         
         public IEmailSendService EmailSendService { get; set; }
         public IMailDataRepositories MailDataRepositories { get; set; }
         public ReminderMailSenderService(IMailDataRepositories mailDataRepositories, IEmailSendService emailSendService) {
@@ -18,7 +18,7 @@ namespace CoreServices.Impl {
                 var mailNeedToSendUsers = MailDataRepositories.GetUsersToSendFollowUpMail();
                 foreach (var user in mailNeedToSendUsers) {
                     var emailModel = new EmailServiceModel {
-                        FromAddress = "priyagh945@gmail.com",
+                        FromAddress = "sender@gmail.com",
                         Message = GetMailBody(user.Name,user.LinkUID),
                         Subject = "Important Message for you from CusJo",
                         ToAddress = user.MailId

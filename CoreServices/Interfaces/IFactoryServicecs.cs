@@ -5,6 +5,4 @@ namespace CoreServices.Interfaces {
     {
         IJobService GetService(ServiceType serviceType);
     }
-
-
 }

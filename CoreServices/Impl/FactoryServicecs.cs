@@ -17,8 +17,7 @@ namespace CoreServices.Impl {
                     return new PrimaryMailSenderService(MailDataRepositories, EmailSendService);
                 case ServiceType.ReminderMailSend:
                     return new ReminderMailSenderService(MailDataRepositories, EmailSendService);
-                default:return  null;
-                    
+                default:return  null;                    
             }
            
         }

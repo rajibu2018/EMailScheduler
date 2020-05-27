@@ -2,5 +2,5 @@
     public enum ServiceType {
         PrimaryMailSend,
         ReminderMailSend
-    }
+    } 
 }

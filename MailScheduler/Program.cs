@@ -7,7 +7,6 @@ using System;
 namespace MailScheduler {
     class Program {
 
-
         static void Main(string[] args) {
             var MailDataRepositories = new MailDataRepositories();
             var EmailSendService = new EmailSendService();
