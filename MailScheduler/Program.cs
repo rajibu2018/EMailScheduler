@@ -10,7 +10,7 @@ namespace MailScheduler {
         static void Main(string[] args) {
             var MailDataRepositories = new MailDataRepositories();
             var EmailSendService = new EmailSendService();
-            IFactoryServicecs factoryServicecs = new FactoryServicecs(MailDataRepositories, EmailSendService);
+            var factoryServicecs = new FactoryServicecs(MailDataRepositories, EmailSendService);
 
             var executionTime = new TimeSpan(0, 0, 0);
             var firstAttemptOfDay = true;
@@ -18,8 +18,9 @@ namespace MailScheduler {
                 if (DateTime.Now.TimeOfDay.Hours == executionTime.Hours && DateTime.Now.TimeOfDay.Minutes == executionTime.Minutes) {
                     if (firstAttemptOfDay) {
                         firstAttemptOfDay = false;
-                        factoryServicecs.GetService(ServiceType.ReminderMailSend).Execute();
-                        factoryServicecs.GetService(ServiceType.PrimaryMailSend).Execute();
+                       
+                        factoryServicecs.GetService(ServiceType.ReminderMailSend).Execute(null);
+                        factoryServicecs.GetService(ServiceType.PrimaryMailSend).Execute(null);
                     }
                 } else {
                     firstAttemptOfDay = true;

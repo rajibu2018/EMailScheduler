@@ -1,6 +1,7 @@
 ﻿namespace ServiceModel {
     public enum ServiceType {
         PrimaryMailSend,
-        ReminderMailSend
+        ReminderMailSend,
+        ThanksMailSend
     } 
 }

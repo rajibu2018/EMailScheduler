@@ -45,7 +45,7 @@ namespace DataRepositories {
         }
 
         public List<UserEmailServiceModel> GetUsersToSendFollowUpMail() {
-            var queryString = "SELECT  U.Name, U.MailId, M.LinkUID FROM Users U JOIN MailSentHistory M ON U.Id=M.UserId WHERE M.LinkOpned=0 AND DATEDIFF(DAY, M.SentDate,GETDATE()) <= 3";
+            var queryString = "SELECT  U.Name, U.MailId, M.LinkUID FROM Users U JOIN MailSentHistory M ON U.Id=M.UserId WHERE M.LinkOpned=0  AND DATEDIFF(DAY, M.SentDate,GETDATE()) <= 3";
             var users = new List<UserEmailServiceModel>();
             using (SqlConnection connection = new SqlConnection(ConnectionString)) {
                 SqlCommand command = new SqlCommand(queryString, connection);
@@ -64,6 +64,37 @@ namespace DataRepositories {
                 connection.Close();
             }
             return users;
+        }
+
+        public UserEmailServiceModel GetUsersToSendThankYouMail(string guid) {
+            var queryString = "SELECT  U.Name, U.MailId FROM Users U JOIN MailSentHistory M ON U.Id=M.UserId WHERE  LinkOpned=0 AND M.LinkUID='" + guid + "'";
+            UserEmailServiceModel user = null;
+            using (SqlConnection connection = new SqlConnection(ConnectionString)) {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read()) {
+                    user = new UserEmailServiceModel {
+                        Name = reader["Name"] != null ? reader["Name"].ToString() : string.Empty,
+                        MailId = reader["MailId"] != null ? reader["MailId"].ToString() : string.Empty
+                    };
+                }
+
+                reader.Close();
+                connection.Close();
+            }
+            return user;
+        }
+
+        public void UpdateEmailHistory(string linkUID) {
+            var queryString = "Update MailSentHistory set LinkOpned=1 where LinkUID='" + linkUID + "' ";
+            using (SqlConnection connection = new SqlConnection(ConnectionString)) {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
         }
     }
 }

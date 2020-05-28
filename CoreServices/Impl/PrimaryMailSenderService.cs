@@ -15,21 +15,23 @@ namespace CoreServices.Impl {
             MailDataRepositories = mailDataRepositories;
             EmailSendService = emailSendService;
         }
-        public void Execute() {
+        public void Execute(object contract) {
             try {
                 var mailNeedToSendUsers = MailDataRepositories.GetUsersToSendPrimaryMail();
-                foreach (var user in mailNeedToSendUsers) {
-                    var guid = Guid.NewGuid();
-                    var emailModel = new EmailServiceModel {
-                        FromAddress = "sender@gmail.com",
-                        Message = GetMailBody(user.Name, guid),
-                        Subject = "Important Message for you from CusJo",
-                        ToAddress = user.MailId
-                    };
-                    EmailSendService.SendEmail(emailModel);
+                if (mailNeedToSendUsers != null && mailNeedToSendUsers.Count > 0) {
+                    foreach (var user in mailNeedToSendUsers) {
+                        var guid = Guid.NewGuid();
+                        var emailModel = new EmailServiceModel {
+                            FromAddress = "sender@gmail.com",
+                            Message = GetMailBody(user.Name, guid),
+                            Subject = "Important Message for you from CusJo",
+                            ToAddress = user.MailId
+                        };
+                        EmailSendService.SendEmail(emailModel);
 
-                    // save email sent history
-                    MailDataRepositories.SaveEmailSentHistory(user, guid);
+                        // save email sent history
+                        MailDataRepositories.SaveEmailSentHistory(user, guid);
+                    }
                 }
             } catch (Exception ex) {
                 throw new Exception(ex.Message);
@@ -41,7 +43,7 @@ namespace CoreServices.Impl {
             var sb = new StringBuilder();
             sb.AppendLine("Hello " + userName + ",");
             sb.AppendLine("Please click on the below important link ");
-            sb.AppendLine("https://cusjo.cusjo.com/" + guid);
+            sb.AppendLine("http://localhost:49236/checkmail/" + guid);
             sb.AppendLine("");
             sb.AppendLine("");
             sb.AppendLine("Thanks ");

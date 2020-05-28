@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBScript", "DBScript", "{F0
 		C:\Users\dell\Desktop\DBScript.sql = C:\Users\dell\Desktop\DBScript.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailViewWebApp", "MailViewWebApp\MailViewWebApp.csproj", "{16AB8FD9-B9E1-4F6E-B901-6B85FA437CB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06A2E3A1-773B-4270-B69D-F1347A0AAD8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16AB8FD9-B9E1-4F6E-B901-6B85FA437CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16AB8FD9-B9E1-4F6E-B901-6B85FA437CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16AB8FD9-B9E1-4F6E-B901-6B85FA437CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16AB8FD9-B9E1-4F6E-B901-6B85FA437CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

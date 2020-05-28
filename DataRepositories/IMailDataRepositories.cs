@@ -7,10 +7,10 @@ namespace DataRepositories
 {
    public interface IMailDataRepositories
     {
-
         List<User> GetUsersToSendPrimaryMail();
         void SaveEmailSentHistory(User user, Guid guid);
         List<UserEmailServiceModel> GetUsersToSendFollowUpMail();
-
+        UserEmailServiceModel GetUsersToSendThankYouMail(string guid);
+        void UpdateEmailHistory(string linkUID);
     }
 }

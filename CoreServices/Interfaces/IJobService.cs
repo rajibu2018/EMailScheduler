@@ -1,6 +1,6 @@
 ﻿namespace CoreServices.Interfaces {
     public interface IJobService {
-        void Execute();
+        void Execute(object contract);
     }
 }
 

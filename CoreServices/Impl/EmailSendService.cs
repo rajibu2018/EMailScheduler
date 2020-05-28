@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace CoreServices.Impl {
     public class EmailSendService : IEmailSendService {
-        public async void SendEmail(EmailServiceModel emailServiceModel) {
+        public void SendEmail(EmailServiceModel emailServiceModel) {
             try {
                 var mail = new MailMessage();
                 var SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress(emailServiceModel.FromAddress);//need to change
+                mail.From = new MailAddress("rajibu2003@gmail.com");
                 mail.To.Add(emailServiceModel.ToAddress);
                 mail.Subject = emailServiceModel.Subject;
                 mail.Body = emailServiceModel.Message;
                 SmtpServer.Host = "smtp.gmail.com";
                 SmtpServer.Port = 25;
                 SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("sender@gmail.com", "password", "smtp.gmail.com");//need to change
+                SmtpServer.Credentials = new System.Net.NetworkCredential("rajibu2003@gmail.com", "priya@89", "smtp.gmail.com");//need to change
                 SmtpServer.EnableSsl = true;
-                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.UseDefaultCredentials = true;
                 mail.IsBodyHtml = false;
+                SmtpServer.SendAsync(mail, emailServiceModel.Subject);
 
-               await Task.Factory.StartNew(()=> SmtpServer.Send(mail));
-               
             } catch (Exception) {               
             }
         }
