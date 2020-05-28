@@ -24,8 +24,7 @@ namespace CoreServices.Impl {
 
                await Task.Factory.StartNew(()=> SmtpServer.Send(mail));
                
-            } catch (Exception) {
-               
+            } catch (Exception) {               
             }
         }
     }
