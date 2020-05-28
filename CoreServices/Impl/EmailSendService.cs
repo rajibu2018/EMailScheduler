@@ -17,7 +17,7 @@ namespace CoreServices.Impl {
                 SmtpServer.Host = "smtp.gmail.com";
                 SmtpServer.Port = 25;
                 SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("sender@gmail.com", "priyanka12?1", "smtp.gmail.com");//need to change
+                SmtpServer.Credentials = new System.Net.NetworkCredential("sender@gmail.com", "password", "smtp.gmail.com");//need to change
                 SmtpServer.EnableSsl = true;
                 SmtpServer.UseDefaultCredentials = false;
                 mail.IsBodyHtml = false;
