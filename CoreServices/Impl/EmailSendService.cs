@@ -9,18 +9,19 @@ namespace CoreServices.Impl {
         public void SendEmail(EmailServiceModel emailServiceModel) {
             try {
                 var mail = new MailMessage();
-                var SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("rajibu2003@gmail.com");
+                var SmtpServer = new SmtpClient();
+                mail.From = new MailAddress(emailServiceModel.FromAddress);
                 mail.To.Add(emailServiceModel.ToAddress);
                 mail.Subject = emailServiceModel.Subject;
                 mail.Body = emailServiceModel.Message;
+                mail.IsBodyHtml = true;
                 SmtpServer.Host = "smtp.gmail.com";
-                SmtpServer.Port = 25;
-                SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("rajibu2003@gmail.com", "priya@89", "smtp.gmail.com");//need to change
+                SmtpServer.Port = 587;
                 SmtpServer.EnableSsl = true;
-                SmtpServer.UseDefaultCredentials = true;
-                mail.IsBodyHtml = false;
+                SmtpServer.UseDefaultCredentials = false;
+               
+                SmtpServer.Credentials = new System.Net.NetworkCredential(emailServiceModel.FromAddress, "password");//need to change
+                SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
                 SmtpServer.SendAsync(mail, emailServiceModel.Subject);
 
             } catch (Exception) {               
